@@ -28,6 +28,8 @@
 /web/README.md
 /web/README.txt
 /web/autoload.php
+/web/autoload_runtime.php
+/bin
 /web/example.gitignore
 /web/index.php
 /web/modules/README.txt
