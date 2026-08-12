@@ -13,11 +13,24 @@ body {
   --color-purple: #5b2a86;
   --color-green: #0b6b32;
 
-  --font-primary: rubik, "Open Sans", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  --font-secondary: "Mulish", var(--font-primary);
+  --font-primary: "Inter", "Open Sans", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  --font-secondary: "Poppins", var(--font-primary);
+  --font-heading-1: var(--font-secondary);
+  --font-heading-2: var(--font-secondary);
+  --font-heading-3: var(--font-secondary);
+  --font-heading-4: var(--font-secondary);
+  --font-heading-5: var(--font-secondary);
+  --font-heading-6: var(--font-secondary);
+  --heading-font-weight: 700;
+  --button-font-family: var(--font-secondary);
+  --text-input-font-family: var(--font-primary);
   --sidebar-exposed-form-bg-color: var(--color-grey-lightest);
   --grid-column-spacing: var(--spacing-larger);
   --line-height-small: 1.15;
+
+  /* Wider content container — the default localgov_base 73.75rem (1180px)
+     reads too narrow/hemmed-in for this design on desktop. */
+  --width-container: 88rem;
 
   /* Links */
   --color-link: var(--color-navy);

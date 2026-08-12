@@ -34,37 +34,31 @@
   justify-content: center;
 }
 
-/* Pill-ify the real "common tasks" service CTA block so topic pages match */
+/* Pill-ify the real "common tasks" service CTA block so topic pages match.
+   Leave the existing .lgd-row/.lgd-row__one-third grid alone (it already
+   does the responsive 3-up layout correctly, same as the services grid) —
+   only style the pill's own look. */
+.service-cta-block__list {
+  border-block-end: 0;
+}
 .service-cta-block__link {
   border-radius: 999px;
   background-color: var(--color-navy);
-  margin-block-end: var(--spacing-small);
 }
 .service-cta-block__link:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
-.service-cta-block__list-item {
-  display: inline-block;
-  margin-inline-end: var(--spacing);
-}
-.service-cta-block__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing);
-  border-block-end: 0;
-}
 
 /* ---------- Hero (homepage) ---------- */
 .staffs-hero {
   position: relative;
-  min-height: 26rem;
+  min-height: 30rem;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, rgba(30, 42, 92, 0.15), rgba(30, 42, 92, 0.35)),
-    linear-gradient(120deg, #8fae6b, #6fa38f 45%, #4f7fa0 100%);
+  background-image: url("../../assets/images/hero-staffordshire-countryside.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 70%;
 }
 .staffs-hero__inner {
   position: relative;
@@ -139,13 +133,19 @@
   gap: var(--spacing-small);
 }
 .staffs-rate__stars a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-smallest);
   padding: var(--spacing-smaller) var(--spacing);
   background: var(--color-white);
   color: var(--color-navy);
   border-radius: var(--border-radius);
   text-decoration: none;
   font-weight: 700;
+}
+.staffs-rate__stars a i {
+  color: var(--color-pink);
+  margin-inline-end: 2px;
 }
 
 /* ---------- Footer social + subscribe gradient band ---------- */
@@ -177,6 +177,7 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.15);
   color: var(--color-white);
+  font-size: 1.1rem;
 }
 .staffs-footer-cta__social a:hover {
   background: rgba(255, 255, 255, 0.3);
