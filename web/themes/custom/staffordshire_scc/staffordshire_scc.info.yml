@@ -1,0 +1,81 @@
+name: "Staffordshire SCC"
+description: "Staffordshire County Council demo theme, forked from LocalGov Drupal's Scarfolk theme (base theme: localgov_base)."
+type: theme
+core_version_requirement: ^10.1.3 || ^11
+base theme: "localgov_base"
+
+libraries-extend:
+  localgov_base/global:
+    - staffordshire_scc/global
+  localgov_base/alert-banner:
+    - staffordshire_scc/alert-banner
+  localgov_base/header:
+    - staffordshire_scc/header
+  localgov_base/banner:
+    - staffordshire_scc/banner
+  localgov_base/ia-block:
+    - staffordshire_scc/ia-block
+  localgov_base/box-links:
+    - staffordshire_scc/box-links
+  localgov_base/media-with-text:
+    - staffordshire_scc/media-with-text
+  localgov_base/newsroom-teaser:
+    - staffordshire_scc/newsroom-teaser
+  localgov_base/breadcrumbs:
+    - staffordshire_scc/breadcrumbs
+  localgov_base/guide-nav:
+    - staffordshire_scc/guide-nav
+  localgov_base/link-and-summary:
+    - staffordshire_scc/link-and-summary
+  core/components.localgov_base--prev-next:
+    - staffordshire_scc/prev-next
+  localgov_base/service-landing-page:
+    - staffordshire_scc/service-landing-page
+  localgov_base/service-statuses:
+    - staffordshire_scc/service-statuses
+  localgov_base/service-cta-block:
+    - staffordshire_scc/service-cta-block
+  localgov_base/page-title-block:
+    - staffordshire_scc/page-title-block
+  localgov_base/teaser:
+    - staffordshire_scc/teaser
+  localgov_base/image-with-caption:
+    - staffordshire_scc/image-with-caption
+  localgov_base/events:
+    - staffordshire_scc/events
+  localgov_base/news:
+    - staffordshire_scc/news
+  localgov_base/sidebar:
+    - staffordshire_scc/sidebar
+  localgov_base/step-by-step:
+    - staffordshire_scc/step-by-step
+  localgov_base/featured-teasers:
+    - staffordshire_scc/featured-teasers
+  localgov_base/key-contacts:
+    - staffordshire_scc/key-contacts
+
+regions:
+  tabs: "Tabs"
+  header: "Header"
+  search: "Search"
+  mobile_search: "Mobile search"
+  primary_menu: "Primary menu"
+  secondary_menu: "Secondary menu"
+  subsites_menu: "Subsites menu"
+  banner: "Banner"
+  breadcrumb: "Breadcrumb"
+  messages: "Messages"
+  content_top: "Content top"
+  content: "Content"
+  content_bottom: "Content bottom"
+  sidebar_first: "Sidebar first"
+  sidebar_second: "Sidebar second"
+  footer_first: "Footer first"
+  footer_second: "Footer second"
+  footer_third: "Footer third"
+  footer: "Footer"
+  lower_footer_first: "Lower footer first"
+  lower_footer_second: "Lower footer second"
+  lower_footer_third: "Lower footer third"
+  housekeeping: "Housekeeping"
+  disabled: "Disabled"

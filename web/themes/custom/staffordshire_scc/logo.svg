@@ -1,0 +1,11 @@
+<svg width="260" height="64" viewBox="0 0 260 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Staffordshire County Council">
+  <!-- Original infinity-knot mark, demo use only -->
+  <g fill="none" stroke="#1e2a5c" stroke-width="2.5">
+    <path d="M28 32c0-9 7-16 15-16s15 9 15 16-7 16-15 16-15-7-15-16z"/>
+    <path d="M28 32c0-9 -7-16 -15-16s-15 9 -15 16 7 16 15 16 15-7 15-16z"/>
+    <path d="M22 32c0-5.5 4.5-10 9-10s9 5.5 9 10-4.5 10-9 10-9-4.5-9-10z"/>
+    <path d="M22 32c0-5.5 -4.5-10 -9-10s-9 5.5 -9 10 4.5 10 9 10 9-4.5 9-10z"/>
+  </g>
+  <text x="66" y="27" font-family="Rubik, Arial, sans-serif" font-size="19" font-weight="700" fill="#1e2a5c">Staffordshire</text>
+  <text x="66" y="48" font-family="Rubik, Arial, sans-serif" font-size="19" font-weight="700" fill="#1e2a5c">County Council</text>
+</svg>

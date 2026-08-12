@@ -1,0 +1,86 @@
+/*
+  Staffordshire County Council demo palette.
+  Overrides the localgov_base "root" variables — see localgov_base's own
+  css/base/variables.css for the full list of what's available to override.
+*/
+body {
+  /* Core palette */
+  --color-accent: #1e2a5c; /* Staffordshire navy */
+  --color-accent-2: #d6006c; /* Staffordshire magenta/pink */
+  --color-navy: #1e2a5c;
+  --color-navy-dark: #161f45;
+  --color-pink: #d6006c;
+  --color-purple: #5b2a86;
+  --color-green: #0b6b32;
+
+  --font-primary: rubik, "Open Sans", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  --font-secondary: "Mulish", var(--font-primary);
+  --sidebar-exposed-form-bg-color: var(--color-grey-lightest);
+  --grid-column-spacing: var(--spacing-larger);
+  --line-height-small: 1.15;
+
+  /* Links */
+  --color-link: var(--color-navy);
+
+  /* Breadcrumbs */
+  --breadcrumbs-divider: "›";
+  --breadcrumbs-background-color: var(--color-navy);
+  --breadcrumbs-link-color: var(--color-white);
+
+  --heading-1-line-height: var(--line-height-small);
+  --heading-2-line-height: var(--line-height-small);
+  --heading-3-line-height: var(--line-height-small);
+  --heading-4-line-height: var(--line-height-small);
+  --heading-5-line-height: var(--line-height-small);
+  --heading-6-line-height: var(--line-height-small);
+
+  /* Pill-shaped buttons and button-styled links (CTA pills, service tasks) */
+  --button-border-radius: 999px;
+  --button-link-bg-color: var(--color-navy);
+  --button-link-bg-color-hover: var(--color-pink);
+  --button-bg-color: var(--color-navy);
+  --button-bg-color-hover: var(--color-pink);
+  --button-border-color: var(--color-navy);
+  --button-text-color-hover: var(--color-white);
+
+  /* Header */
+  --color-section-header-bg: var(--color-white);
+  --header-link-color: var(--color-navy);
+  --header-logo-width: 12rem;
+  --color-slogan: var(--color-navy);
+  --header-services-button-color: var(--color-navy);
+  --header-services-button-border-color: var(--color-navy);
+  --header-services-button-bg-color-hover: var(--color-navy);
+  --header-search-button-bg-color: var(--color-navy);
+  --header-search-button-bg-color-hover: var(--color-pink);
+  --header-search-button-color-hover: var(--color-white);
+
+  /* Secondary menu (Services / Pay row) */
+  --secondary-menu-bg-color-first: var(--color-white);
+  --secondary-menu-bg-color-second: var(--color-white);
+  --secondary-menu-link-color: var(--color-navy);
+  --secondary-menu-link-color-focus: var(--color-pink);
+
+  /* Banner / hero */
+  --banner-content-bg-color: var(--color-navy);
+  --banner-content-text-color: var(--color-white);
+  --color-banner-title-link: var(--color-white);
+
+  /* Housekeeping (bottom footer strip) — white here, not navy */
+  --color-section-housekeeping-bg: var(--color-white);
+  --color-housekeeping-heading: var(--color-navy);
+  --color-housekeeping-link: var(--color-navy);
+  --color-housekeeping-text: var(--color-navy);
+
+  /* Footer */
+  --color-section-pre-footer-bg: var(--color-navy);
+  --color-footer-link: var(--color-navy);
+
+  /* Alert banner / service statuses / misc accent usage */
+  --alert-banner-bg-color-minor: var(--color-pink);
+  --service-statuses-padding: var(--grid-column-spacing);
+
+  /* Tabs */
+  --tabs-button-bg-color: var(--color-grey-lightest);
+  --tabs-border-color: var(--border-color);
+}

@@ -1,0 +1,339 @@
+/*
+  Staffordshire County Council demo — component-level overrides on top of
+  localgov_base/localgov_scarfolk. Kept separate from variables.css so it's
+  obvious which bits are "just a variable" vs "new markup this theme owns".
+*/
+
+/* ---------- Generic pill button, used by CTA links we hand-author ---------- */
+.staffs-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing);
+  padding: var(--spacing) var(--spacing-large);
+  border-radius: 999px;
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+}
+.staffs-pill:hover,
+.staffs-pill:focus {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  text-decoration: underline;
+}
+.staffs-pill__icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pill-ify the real "common tasks" service CTA block so topic pages match */
+.service-cta-block__link {
+  border-radius: 999px;
+  background-color: var(--color-navy);
+  margin-block-end: var(--spacing-small);
+}
+.service-cta-block__link:hover {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+.service-cta-block__list-item {
+  display: inline-block;
+  margin-inline-end: var(--spacing);
+}
+.service-cta-block__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  border-block-end: 0;
+}
+
+/* ---------- Hero (homepage) ---------- */
+.staffs-hero {
+  position: relative;
+  min-height: 26rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(30, 42, 92, 0.15), rgba(30, 42, 92, 0.35)),
+    linear-gradient(120deg, #8fae6b, #6fa38f 45%, #4f7fa0 100%);
+  background-size: cover;
+  background-position: center;
+}
+.staffs-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--width-container);
+  margin-inline: auto;
+  padding: var(--spacing-larger) var(--spacing-large);
+}
+.staffs-hero__card {
+  background: var(--color-white);
+  border-radius: 1.5rem;
+  padding: var(--spacing-largest) var(--spacing-large);
+  max-width: 34rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.staffs-hero__card h1 {
+  color: var(--color-navy);
+  margin-block-start: 0;
+}
+.staffs-hero__search {
+  display: flex;
+  border: 2px solid var(--color-pink);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-block-end: var(--spacing-large);
+}
+.staffs-hero__search input {
+  flex: 1;
+  border: 0;
+  padding: var(--spacing);
+  font-size: var(--font-size-medium);
+}
+.staffs-hero__search input:focus {
+  outline: none;
+}
+.staffs-hero__search button {
+  border: 0;
+  background: var(--color-white);
+  color: var(--color-pink);
+  padding-inline: var(--spacing);
+  cursor: pointer;
+  font-size: var(--font-size-large);
+}
+.staffs-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  margin-block-start: var(--spacing-larger);
+}
+
+/* ---------- Rate this page band ---------- */
+.staffs-rate {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--spacing-large);
+}
+.staffs-rate__inner {
+  max-width: var(--width-container);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+.staffs-rate__title {
+  font-weight: 700;
+  font-size: var(--font-size-large);
+}
+.staffs-rate__stars {
+  display: flex;
+  gap: var(--spacing-small);
+}
+.staffs-rate__stars a {
+  display: inline-block;
+  padding: var(--spacing-smaller) var(--spacing);
+  background: var(--color-white);
+  color: var(--color-navy);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ---------- Footer social + subscribe gradient band ---------- */
+.staffs-footer-cta {
+  background: linear-gradient(90deg, var(--color-pink), var(--color-purple));
+  color: var(--color-white);
+  padding: var(--spacing-largest) var(--spacing-large);
+}
+.staffs-footer-cta__inner {
+  max-width: var(--width-container);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-larger);
+}
+.staffs-footer-cta__social {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: var(--spacing);
+}
+.staffs-footer-cta__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+}
+.staffs-footer-cta__social a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.staffs-footer-cta__signup p {
+  margin-block-start: 0;
+  font-size: var(--font-size-large);
+  max-width: 26rem;
+}
+.staffs-btn-green {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  background: var(--color-green);
+  color: var(--color-white);
+  padding: var(--spacing) var(--spacing-large);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 700;
+}
+.staffs-btn-green:hover {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* ---------- Card grid (Our Services / Featured / News) ---------- */
+.staffs-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--spacing-large);
+  margin-block-end: var(--spacing-largest);
+}
+.staffs-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-large);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
+}
+.staffs-card__image {
+  margin: calc(var(--spacing-large) * -1) calc(var(--spacing-large) * -1) var(--spacing) calc(var(--spacing-large) * -1);
+  height: 10rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background-size: cover;
+  background-position: center;
+}
+.staffs-card h3 a,
+.staffs-card h3 {
+  color: var(--color-navy);
+}
+.staffs-card ul {
+  padding-inline-start: 1.1rem;
+}
+.staffs-card ul li::marker {
+  color: var(--color-pink);
+}
+.staffs-card__date {
+  color: var(--color-grey-dark);
+  font-size: var(--font-size-small);
+}
+
+.staffs-section {
+  max-width: var(--width-container);
+  margin-inline: auto;
+  padding-inline: var(--spacing-large);
+  padding-block: var(--spacing-larger);
+}
+.staffs-section h2 {
+  border-bottom: 4px solid var(--color-pink);
+  display: inline-block;
+  padding-bottom: var(--spacing-smaller);
+  margin-block-end: var(--spacing-larger);
+}
+
+/* Card / teaser view mode used by the "Our Services" destinations grid.
+   The field__items wrapper ships `float: left` from core field CSS, which
+   in practice stops the nested .lgd-row grid from wrapping into columns —
+   force it explicitly rather than fight the cascade. */
+.lgd-teaser-list,
+.service-landing-page__services {
+  padding-inline-start: 0;
+  list-style: none;
+}
+.field-localgov-destinations--grid-3 {
+  display: grid !important;
+  float: none !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: var(--spacing-large) !important;
+}
+.field-localgov-destinations--grid-3 > * {
+  width: auto !important;
+  grid-column: auto !important;
+}
+@media screen and (max-width: 60rem) {
+  .field-localgov-destinations--grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+}
+.lgd-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-large);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
+}
+.lgd-card h3 a {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+.service-landing-page__service .lgd-teaser {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-large);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
+  height: 100%;
+}
+.service-landing-page__service .lgd-teaser h3 a {
+  color: var(--color-navy);
+}
+
+/* ---------- Dark navy title band (topic / sub-landing / content pages) ---------- */
+.lgd-page-title-block {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding-block: var(--spacing-larger);
+}
+.lgd-page-title-block__title,
+.lgd-page-title-block__subheader {
+  color: var(--color-white);
+}
+.lgd-page-title-block__title {
+  border-bottom: 4px solid var(--color-pink);
+  display: table;
+  padding-bottom: var(--spacing-small);
+}
+
+/* ---------- Bottom footer link row (housekeeping region) ---------- */
+.lgd-footer__housekeeping {
+  padding: var(--spacing-large);
+  border-top: 1px solid var(--color-grey-lighter);
+}
+.lgd-footer__housekeeping .lgd-region__inner {
+  max-width: var(--width-container);
+  margin-inline: auto;
+}
+.lgd-footer__housekeeping ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+.lgd-footer__housekeeping a {
+  color: var(--color-navy);
+  font-weight: 700;
+  text-decoration: none;
+}
+.lgd-footer__housekeeping a:hover {
+  text-decoration: underline;
+}
