@@ -1,3 +1,24 @@
+localgov_base_remove_css: false
+localgov_base_remove_js: false
+localgov_base_add_unpublished_background_colour: false
+localgov_base_add_draft_note_to_unpublished_content: false
+localgov_base_add_archived_note_to_archived_content: false
+localgov_base_header_behaviour: null
+localgov_base_service_landing_page_child_pages_list_style: grid_3
+localgov_base_service_sub_landing_page_child_pages_list_style: grid_2
+localgov_base_localgov_guides_stacked_heading: false
+localgov_base_localgov_guides_vertical_navigation: false
+localgov_base_mobile_breakpoint_js: '768'
+localgov_base_responsive_wysiwyg_tables: false
+localgov_base_equal_heights_classes: ''
 logo:
-  use_default: '0'
+  use_default: 0
   path: themes/custom/staffordshire_scc/assets/images/staffordshire-logo.jpg
+features:
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+favicon:
+  use_default: 1
+localgov_base_show_back_to_top_link: 1

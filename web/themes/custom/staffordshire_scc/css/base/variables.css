@@ -59,7 +59,7 @@ body {
   /* Header */
   --color-section-header-bg: var(--color-white);
   --header-link-color: var(--color-navy);
-  --header-logo-width: 12rem;
+  --header-logo-width: 16rem;
   --color-slogan: var(--color-navy);
   --header-services-button-color: var(--color-navy);
   --header-services-button-border-color: var(--color-navy);

@@ -24,3 +24,10 @@ function staffordshire_scc_preprocess_node(&$variables) {
     $variables['#attached']['library'][] = 'staffordshire_scc/publications';
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter() for the header search block form.
+ */
+function staffordshire_scc_form_search_block_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['keys']['#attributes']['placeholder'] = t('Search');
+}

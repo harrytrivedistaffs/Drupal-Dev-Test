@@ -1,0 +1,21 @@
+uuid: b116bb2c-0f1f-4611-a06d-26edb4478864
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - staffordshire_scc
+id: staffs_header_search
+theme: staffordshire_scc
+region: search
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }
