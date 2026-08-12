@@ -1,0 +1,23 @@
+uuid: 1f832073-bf9a-4319-bb6b-d4680703207b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: HctlFbJM38bZj0PJl31WGfl3G_1IaDsSBsXYLn76yXE
+id: node.localgov_address_first_line
+field_name: localgov_address_first_line
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: a52a3808-4b56-46a6-9ed7-a323ef92b865
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00bd16b2-3e68-4678-9b36-29f2e86d6365'
+  module:
+    - block_content
+    - system
+  theme:
+    - staffordshire_scc
+id: staffs_homepage_featured
+theme: staffordshire_scc
+region: content_bottom
+weight: -30
+provider: null
+plugin: 'block_content:00bd16b2-3e68-4678-9b36-29f2e86d6365'
+settings:
+  id: 'block_content:00bd16b2-3e68-4678-9b36-29f2e86d6365'
+  label: 'Homepage featured'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

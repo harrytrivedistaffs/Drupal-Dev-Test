@@ -1,0 +1,29 @@
+uuid: 10aa2843-a07a-489d-9deb-48a051f9921c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9635b9ab-3afd-4e05-8eb6-a94103477e1d'
+  module:
+    - block_content
+    - system
+  theme:
+    - staffordshire_scc
+id: staffs_homepage_news
+theme: staffordshire_scc
+region: content_bottom
+weight: -20
+provider: null
+plugin: 'block_content:9635b9ab-3afd-4e05-8eb6-a94103477e1d'
+settings:
+  id: 'block_content:9635b9ab-3afd-4e05-8eb6-a94103477e1d'
+  label: 'Homepage news'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'

@@ -1,0 +1,22 @@
+uuid: 8a0e7ead-9b35-40a3-9122-868fd152e84e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - staffordshire_scc
+_core:
+  default_config_hash: XqdhRTIfjgkSTBL-WtfsStngpA1B7I9_ajAh3cVOk5s
+id: staffordshire_scc_localgov_messages_scarfolk
+theme: staffordshire_scc
+region: messages
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

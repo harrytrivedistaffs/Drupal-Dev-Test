@@ -1,0 +1,23 @@
+uuid: da6c0eeb-e7e5-4fac-9c87-a90fa3ebd45d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b09beecd-d66c-40cf-ad76-5941f1374002'
+  module:
+    - block_content
+  theme:
+    - staffordshire_scc
+id: staffs_footer_social_and_subscribe
+theme: staffordshire_scc
+region: footer
+weight: -10
+provider: null
+plugin: 'block_content:b09beecd-d66c-40cf-ad76-5941f1374002'
+settings:
+  id: 'block_content:b09beecd-d66c-40cf-ad76-5941f1374002'
+  label: 'Footer social and subscribe'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

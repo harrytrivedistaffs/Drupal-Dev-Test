@@ -1,0 +1,22 @@
+uuid: 5a0187b7-ab52-4270-98ed-e4654c16cc54
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - staffordshire_scc
+_core:
+  default_config_hash: HMT0p1pe6D6hsYTqyWbzK2nquVWT6anaDXoNu7WYvPI
+id: staffordshire_scc_localgov_breadcrumbs_scarfolk
+theme: staffordshire_scc
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

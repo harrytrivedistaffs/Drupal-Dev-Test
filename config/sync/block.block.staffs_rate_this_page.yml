@@ -1,0 +1,23 @@
+uuid: 48b93c66-da4c-4450-95e9-8d73ccfc366b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cc0382a4-494f-4821-87c4-0d1c89ab0c57'
+  module:
+    - block_content
+  theme:
+    - staffordshire_scc
+id: staffs_rate_this_page
+theme: staffordshire_scc
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'block_content:cc0382a4-494f-4821-87c4-0d1c89ab0c57'
+settings:
+  id: 'block_content:cc0382a4-494f-4821-87c4-0d1c89ab0c57'
+  label: 'Rate this page'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

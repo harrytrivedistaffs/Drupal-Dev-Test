@@ -1,0 +1,13 @@
+uuid: bcf0eaed-0f70-4788-a481-de28424353e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: Xp1wB04w_ybGJkHrCuoxxtkgfUSJeEO9hqU1g6MxlO4
+id: media.freestyle
+label: Freestyle
+description: null
+targetEntityType: media
+cache: true

@@ -1,0 +1,25 @@
+uuid: 99a15759-e58a-4271-b571-2bfc4a57d148
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - staffordshire_scc
+id: staffs_footer_links_menu
+theme: staffordshire_scc
+region: housekeeping
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

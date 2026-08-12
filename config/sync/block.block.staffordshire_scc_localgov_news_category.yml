@@ -1,0 +1,31 @@
+uuid: 4e9958b4-e1b0-4f79-9e5e-c0b3cbc72bac
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.localgov_news_category
+  module:
+    - facets
+    - system
+  theme:
+    - staffordshire_scc
+_core:
+  default_config_hash: aCGODMuIsJl3ZjGSYh2br8HJA2Fsk_ILYLJ9IwxFusM
+id: staffordshire_scc_localgov_news_category
+theme: staffordshire_scc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:localgov_news_category'
+settings:
+  id: 'facet_block:localgov_news_category'
+  label: Category
+  label_display: '0'
+  provider: facets
+  block_id: localgov_news_category
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '/news/*'

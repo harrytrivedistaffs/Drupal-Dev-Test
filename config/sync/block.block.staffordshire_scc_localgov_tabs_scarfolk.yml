@@ -1,0 +1,22 @@
+uuid: f3df88bf-f8e2-4041-b6ca-7f5cc486f996
+langcode: en
+status: true
+dependencies:
+  theme:
+    - staffordshire_scc
+_core:
+  default_config_hash: 18k4pNekX8og7ZyuFH_4h0qPH5lm4OKpF5OXvHB2JGc
+id: staffordshire_scc_localgov_tabs_scarfolk
+theme: staffordshire_scc
+region: tabs
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

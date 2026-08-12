@@ -1,0 +1,22 @@
+uuid: 2dc5675e-2e36-44f9-9040-bd268b6cef83
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_services_page
+  theme:
+    - staffordshire_scc
+_core:
+  default_config_hash: wv9PS2Aoyqot66Q61-wRfhbRUnXVHoUSBBVrCeZiP1c
+id: staffordshire_scc_localgov_servicepagerelatedlinks_scarfolk
+theme: staffordshire_scc
+region: sidebar_second
+weight: 0
+provider: null
+plugin: localgov_services_related_links_block
+settings:
+  id: localgov_services_related_links_block
+  label: 'Service page related links'
+  label_display: '0'
+  provider: localgov_services_page
+visibility: {  }

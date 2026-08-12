@@ -1,0 +1,14 @@
+uuid: 9ccc5241-1e1b-41ec-b51e-70f120e54b22
+langcode: en
+status: true
+dependencies: {  }
+name: 'Full HTML'
+format: full_html
+weight: 10
+filters:
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

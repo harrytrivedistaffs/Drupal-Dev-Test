@@ -1,0 +1,23 @@
+uuid: d70dba96-c2a3-44c1-8a26-39134f48ad76
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: i7xswioyMQSGoGyp4FZg2MhjSUIU1Talpk0_rTBn2yA
+id: node.localgov_email_address
+field_name: localgov_email_address
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
