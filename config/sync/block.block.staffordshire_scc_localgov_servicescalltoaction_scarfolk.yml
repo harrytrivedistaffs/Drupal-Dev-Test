@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - localgov_services
+    - system
   theme:
     - staffordshire_scc
 _core:
@@ -19,4 +20,9 @@ settings:
   label: 'Services call to action'
   label_display: '0'
   provider: localgov_services
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'
