@@ -1,11 +1,11 @@
 /*
-  Staffordshire County Council demo — component-level overrides on top of
+  Staffordshire County Council demo. Component-level overrides on top of
   localgov_base/localgov_scarfolk. Kept separate from variables.css so it's
   obvious which bits are "just a variable" vs "new markup this theme owns".
 */
 
 /* A full-bleed light-grey section background behind the main content area,
-   instead of a lone constrained column floating on plain white — this is
+   instead of a lone constrained column floating on plain white, this is
    what makes the wide-screen gutters read as "a section" rather than dead
    space either side of the page. */
 main.main {
@@ -14,7 +14,7 @@ main.main {
 
 /* Full-bleed breakout: content_top/content_bottom/footer/housekeeping are
    all wrapped in .lgd-container (max-width + centered) by the base theme's
-   region.html.twig — only banner/header/content are exempted. Bands that
+   region.html.twig. Only banner/header/content are exempted. Bands that
    need an edge-to-edge coloured background (title band, rate-this-page,
    footer gradient) have to break out of that constraint explicitly, or
    they render as a centred column with dead space either side. */
@@ -55,8 +55,8 @@ main.main {
 
 /* Pill-ify the real "common tasks" service CTA block so topic pages match.
    Leave the existing .lgd-row/.lgd-row__one-third grid alone (it already
-   does the responsive 3-up layout correctly, same as the services grid) —
-   only style the pill's own look. */
+   does the responsive 3-up layout correctly, same as the services grid).
+   Only style the pill's own look. */
 .service-cta-block__list {
   border-block-end: 0;
 }
@@ -88,7 +88,7 @@ main.main {
   padding: var(--spacing-larger) var(--spacing-large);
 }
 /* Pulled up over the hero's bottom edge, then normal flow pushes whatever
-   comes next down below it — no absolute positioning/overlap math needed. */
+   comes next down below it, no absolute positioning/overlap math needed. */
 .staffs-hero__ctas-wrap {
   position: relative;
   z-index: 2;
@@ -144,7 +144,7 @@ main.main {
 /* ---------- Header: "Services" toggle plain text, no pill/border ----------
    The base theme's generic `button { border-radius: var(--button-border-
    radius); border: var(--border); }` rule (form-items.css) targets every
-   <button>, including this toggle — which is where the unwanted pill came
+   <button>, including this toggle, which is where the unwanted pill came
    from. Strip it back to plain text + the chevron icon it already has. */
 .lgd-header__toggle {
   border: 0;
@@ -359,8 +359,8 @@ main.main {
 
 /* Card / teaser view mode used by the "Our Services" destinations grid.
    The field__items wrapper ships `float: left` from core field CSS, which
-   in practice stops the nested .lgd-row grid from wrapping into columns —
-   force it explicitly rather than fight the cascade. */
+   in practice stops the nested .lgd-row grid from wrapping into columns,
+   so force it explicitly rather than fight the cascade. */
 .lgd-teaser-list,
 .service-landing-page__services {
   padding-inline-start: 0;

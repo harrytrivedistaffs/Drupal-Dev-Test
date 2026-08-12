@@ -1,6 +1,6 @@
 /*
   Staffordshire County Council demo palette.
-  Overrides the localgov_base "root" variables — see localgov_base's own
+  Overrides the localgov_base "root" variables. See localgov_base's own
   css/base/variables.css for the full list of what's available to override.
 */
 body {
@@ -28,7 +28,7 @@ body {
   --grid-column-spacing: var(--spacing-larger);
   --line-height-small: 1.15;
 
-  /* Wider content container — the default localgov_base 73.75rem (1180px)
+  /* Wider content container. The default localgov_base 73.75rem (1180px)
      reads too narrow/hemmed-in for this design on desktop. */
   --width-container: 88rem;
 
@@ -79,7 +79,7 @@ body {
   --banner-content-text-color: var(--color-white);
   --color-banner-title-link: var(--color-white);
 
-  /* Housekeeping (bottom footer strip) — white here, not navy */
+  /* Housekeeping (bottom footer strip), white here, not navy */
   --color-section-housekeeping-bg: var(--color-white);
   --color-housekeeping-heading: var(--color-navy);
   --color-housekeeping-link: var(--color-navy);
