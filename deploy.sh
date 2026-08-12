@@ -43,8 +43,19 @@ esac
 mkdir -p web/sites/default/files
 
 echo
-echo "==> composer install"
-composer install --no-dev --optimize-autoloader
+if command -v composer >/dev/null 2>&1; then
+  echo "==> composer install"
+  composer install --no-dev --optimize-autoloader
+else
+  echo "==> composer not found on PATH — downloading composer.phar locally instead"
+  if [ ! -f composer.phar ]; then
+    "$PHP_BIN" -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    "$PHP_BIN" composer-setup.php --quiet
+    rm -f composer-setup.php
+  fi
+  echo "==> composer install"
+  "$PHP_BIN" composer.phar install --no-dev --optimize-autoloader
+fi
 
 echo
 echo "==> drush deploy (config import + database updates + cache rebuild)"

@@ -30,6 +30,7 @@
 /web/autoload.php
 /web/autoload_runtime.php
 /bin
+/composer.phar
 /web/example.gitignore
 /web/index.php
 /web/modules/README.txt
