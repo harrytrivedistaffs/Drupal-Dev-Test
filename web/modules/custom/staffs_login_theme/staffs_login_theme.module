@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Small CSS overrides for the Gin Login split-screen pages.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function staffs_login_theme_page_attachments(array &$attachments) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $login_routes = [
+    'user.login',
+    'user.register',
+    'user.pass',
+    'user.logout.confirm',
+  ];
+  if (in_array($route_name, $login_routes, TRUE)) {
+    $attachments['#attached']['library'][] = 'staffs_login_theme/login-overrides';
+  }
+}

@@ -1,0 +1,5 @@
+name: 'Staffordshire Login Theming'
+type: module
+description: 'Small CSS overrides for the Gin Login split-screen login/register/password pages (logo size, wallpaper crop) — these pages render in the Gin admin theme, not the site theme, so this can not live in the staffordshire_scc theme.'
+package: Staffordshire SCC
+core_version_requirement: ^11

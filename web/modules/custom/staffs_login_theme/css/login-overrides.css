@@ -1,0 +1,14 @@
+/*
+  Gin Login's own CSS caps the logo at 40px tall and crops the wallpaper
+  with a plain `object-fit: cover` (default centre crop) — fine for a
+  generic photo, but our uploaded building-sign photo has its focal point
+  (the rope mark + text) above and right of image-centre, so a dead-centre
+  crop cuts it off. Nudge the crop toward that focal point instead.
+*/
+body.gin-login .user-form-page__user-form img {
+  max-height: 110px;
+}
+
+body.gin-login .user-form-page__wallpaper img {
+  object-position: 62% 28%;
+}

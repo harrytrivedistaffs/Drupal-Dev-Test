@@ -1,12 +1,17 @@
 _core:
   default_config_hash: NgGG0IRVV2pgGF9MWl9MIsCUiXcpm9Y3IDZJW2FMbZM
 favicon:
-  use_default: true
+  mimetype: image/vnd.microsoft.icon
+  path: 'public://Staffordshire_Rope_Icon.ico'
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
+logo:
+  path: 'public://Staffordshire_Rope_Icon_Transparent.png'
+  use_default: false
 third_party_settings:
   shortcut:
     module_link: true
@@ -14,7 +19,11 @@ preset_accent_color: blue
 preset_focus_color: gin
 enable_darkmode: '0'
 classic_toolbar: horizontal
+secondary_toolbar_frontend: false
 high_contrast_mode: false
 accent_color: ''
 focus_color: ''
+layout_density: ''
+show_description_toggle: false
 show_user_theme_settings: false
+sticky_action_buttons: false

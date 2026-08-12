@@ -1,0 +1,4 @@
+login-overrides:
+  css:
+    theme:
+      css/login-overrides.css: {}
