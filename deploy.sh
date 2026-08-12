@@ -49,9 +49,24 @@ if command -v composer >/dev/null 2>&1; then
 else
   echo "==> composer not found on PATH — downloading composer.phar locally instead"
   if [ ! -f composer.phar ]; then
-    "$PHP_BIN" -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    "$PHP_BIN" composer-setup.php --quiet
-    rm -f composer-setup.php
+    if command -v curl >/dev/null 2>&1; then
+      curl -fsSL -o composer.phar https://getcomposer.org/composer-stable.phar
+    elif command -v wget >/dev/null 2>&1; then
+      wget -q -O composer.phar https://getcomposer.org/composer-stable.phar
+    else
+      echo "deploy.sh: neither curl nor wget is available to download composer.phar." >&2
+      echo "Download it yourself and place it at $(pwd)/composer.phar:" >&2
+      echo "  https://getcomposer.org/composer-stable.phar" >&2
+      exit 1
+    fi
+    if [ ! -s composer.phar ]; then
+      echo "deploy.sh: composer.phar download failed (empty or missing file)." >&2
+      echo "Check this server has outbound internet access to getcomposer.org," >&2
+      echo "or download composer.phar yourself and place it at $(pwd)/composer.phar." >&2
+      rm -f composer.phar
+      exit 1
+    fi
+    chmod +x composer.phar
   fi
   echo "==> composer install"
   "$PHP_BIN" composer.phar install --no-dev --optimize-autoloader
