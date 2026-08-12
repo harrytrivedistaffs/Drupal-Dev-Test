@@ -12,6 +12,17 @@ main.main {
   background: var(--color-grey-lightest);
 }
 
+/* Full-bleed breakout: content_top/content_bottom/footer/housekeeping are
+   all wrapped in .lgd-container (max-width + centered) by the base theme's
+   region.html.twig — only banner/header/content are exempted. Bands that
+   need an edge-to-edge coloured background (title band, rate-this-page,
+   footer gradient) have to break out of that constraint explicitly, or
+   they render as a centred column with dead space either side. */
+.staffs-full-bleed {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
 /* ---------- Generic pill button, used by CTA links we hand-author ---------- */
 .staffs-pill {
   display: inline-flex;
@@ -132,6 +143,8 @@ main.main {
 }
 /* ---------- Rate this page band ---------- */
 .staffs-rate {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
   background: var(--color-navy);
   color: var(--color-white);
   padding: var(--spacing-large);
@@ -170,6 +183,8 @@ main.main {
 
 /* ---------- Footer social + subscribe gradient band ---------- */
 .staffs-footer-cta {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
   background: linear-gradient(90deg, var(--color-pink), var(--color-purple));
   color: var(--color-white);
   padding: var(--spacing-largest) var(--spacing-large);
@@ -319,9 +334,14 @@ main.main {
 
 /* ---------- Dark navy title band (topic / sub-landing / content pages) ---------- */
 .lgd-page-title-block {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
   background: var(--color-navy);
   color: var(--color-white);
   padding-block: var(--spacing-larger);
+  /* Match the left/right edge of the constrained content everywhere else
+     on the page, rather than a small fixed inset from the viewport edge. */
+  padding-inline: max(var(--spacing-large), calc((100vw - var(--width-container)) / 2 + var(--spacing-large)));
 }
 .lgd-page-title-block__title,
 .lgd-page-title-block__subheader {
@@ -345,6 +365,8 @@ main.main {
 
 /* ---------- Bottom footer link row (housekeeping region) ---------- */
 .lgd-footer__housekeeping {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
   padding: var(--spacing-large);
   border-top: 1px solid var(--color-grey-lighter);
 }
