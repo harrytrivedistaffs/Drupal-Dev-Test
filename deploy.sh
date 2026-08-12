@@ -42,6 +42,20 @@ esac
 # track empty directories. Harmless to repeat on later deploys.
 mkdir -p web/sites/default/files
 
+# Seed uploaded files (images etc.) from the Deploy-Artifacts snapshot —
+# but only the very first time. Once .seeded exists, never touch this
+# again, or a later deploy would silently overwrite anything uploaded on
+# the live site since then.
+if [ -f Deploy-Artifacts/staffordshire-scc-files.zip ] && [ ! -f web/sites/default/files/.seeded ]; then
+  echo "==> Seeding web/sites/default/files from Deploy-Artifacts (first run only)"
+  if ! command -v unzip >/dev/null 2>&1; then
+    echo "deploy.sh: unzip not found — extract Deploy-Artifacts/staffordshire-scc-files.zip into web/sites/default/ yourself." >&2
+    exit 1
+  fi
+  unzip -oq Deploy-Artifacts/staffordshire-scc-files.zip -d web/sites/default/
+  touch web/sites/default/files/.seeded
+fi
+
 echo
 if command -v composer >/dev/null 2>&1; then
   echo "==> composer install"
