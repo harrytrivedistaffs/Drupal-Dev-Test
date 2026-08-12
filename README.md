@@ -1,10 +1,4 @@
-# Staffordshire County Council — Drupal 11 demo
 
-A demo replica of staffordshire.gov.uk built on [LocalGov Drupal](https://localgovdrupal.org/) 4.x
-(Drupal 11), with a custom theme (`staffordshire_scc`, forked from LocalGov Drupal's
-Scarfolk demo theme) and placeholder content standing in for the real site's
-information architecture. Built for internal demo purposes — content is generic
-filler, not the real council copy.
 
 - **Profile:** `localgov`
 - **Default theme:** `staffordshire_scc` (`web/themes/custom/staffordshire_scc`), base theme `localgov_base`
