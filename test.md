@@ -11,3 +11,14 @@ Drush configs  : /home/digitalscc/drupaltestv2/vendor/drush/drush/drush.yml
 Drupal root    : /home/digitalscc/drupaltestv2/web
 Site path      : sites/default
 Drupal config  : ../config/sync
+
+
+$databases['default']['default'] = [
+  'database' => 'cpaneluser_dbname',
+  'username' => 'cpaneluser_dbuser',
+  'password' => 'your-db-password',
+  'host' => 'localhost',
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+];
