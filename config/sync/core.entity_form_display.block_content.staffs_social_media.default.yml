@@ -1,0 +1,31 @@
+uuid: 11307049-ac38-422c-8930-135dce41da6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.staffs_social_media
+    - field.field.block_content.staffs_social_media.field_social_links
+  module:
+    - link
+id: block_content.staffs_social_media.default
+targetEntityType: block_content
+bundle: staffs_social_media
+mode: default
+content:
+  field_social_links:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

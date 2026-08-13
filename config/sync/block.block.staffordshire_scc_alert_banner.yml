@@ -1,0 +1,23 @@
+uuid: 12f1554e-1112-4305-bec3-aa7ad59404ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_alert_banner
+  theme:
+    - staffordshire_scc
+_core:
+  default_config_hash: 4yunDTSAVrhKT9QpLfEJQhkTmQ-E7uPYESr91mtxREE
+id: staffordshire_scc_alert_banner
+theme: staffordshire_scc
+region: banner
+weight: -100
+provider: null
+plugin: localgov_alert_banner_block
+settings:
+  id: localgov_alert_banner
+  label: 'Alert banner'
+  label_display: '0'
+  provider: localgov_alert_banner
+  include_types: {  }
+visibility: {  }

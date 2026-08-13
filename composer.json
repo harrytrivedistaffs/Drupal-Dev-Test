@@ -15,8 +15,10 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/core-composer-scaffold": "^11.3",
         "drupal/core-recommended": "^11.3",
+        "drupal/diff": "^2.1.1",
         "drupal/localgov": "^4.0",
         "drupal/localgov_search_solr": "^1.1",
+        "drupal/shield": "^1.8",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
     "require-dev": {

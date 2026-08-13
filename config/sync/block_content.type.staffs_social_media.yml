@@ -1,0 +1,8 @@
+uuid: 46ee4949-66ca-478b-b3cc-eaf6fe778027
+langcode: en
+status: true
+dependencies: {  }
+id: staffs_social_media
+label: 'Social media icons'
+revision: true
+description: null

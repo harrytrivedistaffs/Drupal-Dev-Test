@@ -1,0 +1,25 @@
+uuid: 74f1fb08-61a1-4a4b-9235-af80e86fef76
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.localgov_step_by_step_overview
+  module:
+    - node
+_core:
+  default_config_hash: cZT8rvLk2enPeirU79MropIQlOnOpA2MNuaudlCR_wc
+id: localgov_step_by_step_overview
+label: 'Step by step overview'
+type: 'canonical_entities:node'
+pattern: '/step-by-step/[node:title]'
+selection_criteria:
+  b7733dd9-c007-410f-94cb-896af2a94006:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      localgov_step_by_step_overview: localgov_step_by_step_overview
+selection_logic: and
+weight: -5
+relationships: {  }

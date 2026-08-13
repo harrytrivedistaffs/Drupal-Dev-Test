@@ -1,0 +1,22 @@
+uuid: aeae5d02-caaa-4ce7-8623-b91b7bc72986
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.staffs_code_block
+    - field.storage.block_content.field_code_snippet
+  module:
+    - text
+id: block_content.staffs_code_block.field_code_snippet
+field_name: field_code_snippet
+entity_type: block_content
+bundle: staffs_code_block
+label: 'Code / embed snippet'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

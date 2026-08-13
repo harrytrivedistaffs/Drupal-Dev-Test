@@ -1,0 +1,8 @@
+uuid: 12a1a907-39da-4734-bb32-a1b601186df7
+langcode: en
+status: true
+dependencies: {  }
+id: staffs_code_block
+label: 'Code block'
+revision: true
+description: null

@@ -1,0 +1,31 @@
+uuid: 6101c8a0-21ce-47bf-bcb6-6437ea0b529a
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_publications
+    - node
+  theme:
+    - staffordshire_scc
+id: staffordshire_scc_localgov_publications_page_header_block
+theme: staffordshire_scc
+region: content_top
+weight: -6
+provider: null
+plugin: localgov_publications_page_header_block
+settings:
+  id: localgov_publications_page_header_block
+  label: 'Publications page header block.'
+  label_display: '0'
+  provider: localgov_publications
+  context_mapping:
+    node: '@node.node_route_context:node'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      localgov_publication_cover_page: localgov_publication_cover_page
+      localgov_publication_page: localgov_publication_page

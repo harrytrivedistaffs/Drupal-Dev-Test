@@ -1,0 +1,29 @@
+uuid: 05d81d51-05d1-4f22-8bea-03eee40727d8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:staffs_code_block:5781be74-a792-44af-814e-8a49f9770fbd'
+  module:
+    - block_content
+    - system
+  theme:
+    - staffordshire_scc
+id: staffs_demo_code_block
+theme: staffordshire_scc
+region: sidebar_first
+weight: 100
+provider: null
+plugin: 'block_content:5781be74-a792-44af-814e-8a49f9770fbd'
+settings:
+  id: 'block_content:5781be74-a792-44af-814e-8a49f9770fbd'
+  label: 'Code block'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /component-showcase/all-component-types

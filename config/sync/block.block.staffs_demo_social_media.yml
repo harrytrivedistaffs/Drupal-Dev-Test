@@ -1,0 +1,29 @@
+uuid: 28b90eac-ee34-44f1-830c-3165420c41e6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:staffs_social_media:1e3bfd81-991d-451e-94fb-2442b086e3ad'
+  module:
+    - block_content
+    - system
+  theme:
+    - staffordshire_scc
+id: staffs_demo_social_media
+theme: staffordshire_scc
+region: sidebar_first
+weight: 102
+provider: null
+plugin: 'block_content:1e3bfd81-991d-451e-94fb-2442b086e3ad'
+settings:
+  id: 'block_content:1e3bfd81-991d-451e-94fb-2442b086e3ad'
+  label: 'Social media icons'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /component-showcase/all-component-types

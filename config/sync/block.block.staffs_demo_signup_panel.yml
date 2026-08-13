@@ -1,0 +1,29 @@
+uuid: f9ff8997-cdef-467e-ada3-1e632ff9d8e4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:staffs_signup_panel:4a5ce474-0483-49db-b34d-86bc7093fe25'
+  module:
+    - block_content
+    - system
+  theme:
+    - staffordshire_scc
+id: staffs_demo_signup_panel
+theme: staffordshire_scc
+region: sidebar_first
+weight: 101
+provider: null
+plugin: 'block_content:4a5ce474-0483-49db-b34d-86bc7093fe25'
+settings:
+  id: 'block_content:4a5ce474-0483-49db-b34d-86bc7093fe25'
+  label: 'Sign up panel'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /component-showcase/all-component-types

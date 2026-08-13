@@ -1,0 +1,23 @@
+uuid: 08ba298a-e8d9-42a9-9790-159e99e3c36b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.staffs_code_block
+    - field.field.block_content.staffs_code_block.field_code_snippet
+  module:
+    - text
+id: block_content.staffs_code_block.default
+targetEntityType: block_content
+bundle: staffs_code_block
+mode: default
+content:
+  field_code_snippet:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

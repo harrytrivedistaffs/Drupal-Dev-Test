@@ -1,0 +1,24 @@
+uuid: 17f7f33f-d598-4fa0-8147-0de05b127e22
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.localgov_guides_page
+_core:
+  default_config_hash: mrodcMSMrzQd5CJb7Jo3naj8fngYS_5LuSXKq_2ndPA
+id: node.localgov_guides_page.promote
+field_name: promote
+entity_type: node
+bundle: localgov_guides_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

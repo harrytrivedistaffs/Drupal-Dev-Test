@@ -1,0 +1,23 @@
+uuid: 1260e6a1-b562-415f-9c22-3c1c87306f13
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.staffs_signup_panel
+    - field.storage.block_content.field_signup_link
+  module:
+    - link
+id: block_content.staffs_signup_panel.field_signup_link
+field_name: field_signup_link
+entity_type: block_content
+bundle: staffs_signup_panel
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

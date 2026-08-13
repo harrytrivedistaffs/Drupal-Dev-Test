@@ -1,0 +1,13 @@
+uuid: 11b1f3f5-50ee-48e6-a4ce-6d2a65977a32
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: arcMQFgGAp74R89W4A4WAfjhVHsxv-UEWTORzfDa42w
+name: 'Directory organisation'
+type: localgov_directories_org
+description: 'An organisation. Either as first class directory entry, or used for Open Referral directory entries.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

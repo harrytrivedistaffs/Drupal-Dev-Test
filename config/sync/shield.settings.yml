@@ -1,0 +1,22 @@
+_core:
+  default_config_hash: FLJZME3II5fjmMSrdEvJHp95ZJf8V_X0jbX0VdVU1BU
+shield_enable: true
+credential_provider: shield
+credentials:
+  shield:
+    user: staffordshire
+    pass: 6f6a2a287f66
+  key:
+    user: ''
+    pass_key: ''
+  multikey:
+    user_pass_key: ''
+allow_cli: true
+debug_header: false
+unset_basic_auth_headers: true
+print: 'Staffordshire County Council demo site. Contact the Digital team for access.'
+method: 0
+paths: ''
+allowlist: ''
+http_method_allowlist: {  }
+domains: ''

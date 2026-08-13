@@ -1,0 +1,50 @@
+uuid: 825a16fd-bf63-429f-b3a7-2fe6260cf493
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.staffs_signup_panel
+    - field.field.block_content.staffs_signup_panel.field_signup_link
+    - field.field.block_content.staffs_signup_panel.field_signup_text
+    - field.field.block_content.staffs_signup_panel.field_signup_title
+  module:
+    - link
+    - text
+id: block_content.staffs_signup_panel.default
+targetEntityType: block_content
+bundle: staffs_signup_panel
+mode: default
+content:
+  field_signup_link:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_signup_text:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_signup_title:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

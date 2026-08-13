@@ -1,0 +1,25 @@
+uuid: a4e5a34c-4ed4-4151-99fc-c14c448c78c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_documents.localgov_documents
+    - paragraphs.paragraphs_type.localgov_documents
+_core:
+  default_config_hash: jaSAvNL-vWeoixplD2-hJd9h6pDqa7mG9hzlY9H6YpA
+id: paragraph.localgov_documents.default
+targetEntityType: paragraph
+bundle: localgov_documents
+mode: default
+content:
+  localgov_documents:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

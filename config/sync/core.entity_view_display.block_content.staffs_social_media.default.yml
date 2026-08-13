@@ -1,0 +1,28 @@
+uuid: 72e8f29c-ffb8-4601-ab21-36b00ef0384b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.staffs_social_media
+    - field.field.block_content.staffs_social_media.field_social_links
+  module:
+    - link
+id: block_content.staffs_social_media.default
+targetEntityType: block_content
+bundle: staffs_social_media
+mode: default
+content:
+  field_social_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

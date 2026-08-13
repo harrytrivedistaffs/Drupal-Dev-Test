@@ -1,0 +1,13 @@
+uuid: ca2dc190-aeae-488c-a690-a5777de592bc
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NnAqKraCutcD733p9SJvyuhlcAQR0pCRM2sqtxuLd8E
+name: 'Service status'
+type: localgov_services_status
+description: 'Page to display the status of a service on its service landing page and status lists.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
