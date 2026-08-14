@@ -22,3 +22,46 @@ $databases['default']['default'] = [
   'driver' => 'mysql',
   'prefix' => '',
 ];
+
+
+In SiteProcess.php line 214:
+
+  The command "/home/digitalscc/drupaltestv2/vendor/bin/drush config:import --yes --uri=default" failed.
+
+  Exit Code: 1(General error)
+
+  Working directory:
+
+  Output:
+  ================
+  +------------+---------------------------------------------------------------+-----------+
+  | Collection | Config                                                        | Operation |
+  +------------+---------------------------------------------------------------+-----------+
+  |            | core.entity_view_display.node.localgov_subsites_page.full     | Create    |
+  |            | core.entity_view_display.node.localgov_subsites_overview.full | Create    |
+  |            | core.extension                                                | Update    |
+  |            | metatag.metatag_defaults.node__localgov_news_article          | Update    |
+  |            | staffordshire_scc.settings                                    | Update    |
+  |            | system.theme.global                                           | Update    |
+  |            | views.view.localgov_directory_channel                         | Update    |
+  |            | views.view.localgov_news_list                                 | Update    |
+  |            | block.block.staffs_homepage_news_grid                         | Update    |
+  |            | views.view.localgov_news_search                               | Update    |
+  |            | block.block.staffordshire_scc_localgov_news_date              | Update    |
+  |            | block.block.staffordshire_scc_localgov_news_category          | Update    |
+  |            | block.block.staffordshire_scc_localgov_news_search            | Update    |
+  |            | gin_login.settings                                            | Update    |
+  |            | shield.settings                                               | Update    |
+  +------------+---------------------------------------------------------------+-----------+
+
+   // Import the listed configuration changes?: yes.
+
+
+
+  Error Output:
+  ================
+   [warning] Drush command terminated abnormally.
+
+
+[digitalscc@31 drupaltestv2]$ ^C
+[digitalscc@31 drupaltestv2]$ ^C
