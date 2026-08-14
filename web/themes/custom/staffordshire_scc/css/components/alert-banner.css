@@ -1,8 +1,7 @@
 .localgov-alert-banner {
-  max-width: var(--width-large);
+  max-width: var(--width-container);
   margin: var(--grid-column-spacing) auto;
-  border: var(--border-large);
-  border-color: var(--color-black);
+  border-radius: var(--border-radius);
 }
 
 .localgov-alert-banner > .padding-horizontal {

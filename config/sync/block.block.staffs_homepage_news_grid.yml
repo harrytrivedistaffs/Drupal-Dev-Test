@@ -20,7 +20,7 @@ settings:
   label: News
   label_display: visible
   provider: views
-  views_label: ''
+  views_label: News
   items_per_page: null
   status: true
   info: ''

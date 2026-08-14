@@ -151,12 +151,52 @@ main.main {
   border-radius: 0;
   background: transparent;
   padding-inline: var(--spacing-small);
-  font-weight: 700;
+  font-weight: 600;
 }
 .lgd-header__toggle:hover,
 .lgd-header__toggle:focus {
   background: transparent;
   color: var(--color-pink);
+}
+
+/* Services toggle: chevron icon */
+.lgd-header__toggle-icon::after {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-inline-start: var(--spacing-smaller);
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  font-size: 0;
+  transform: none;
+  transition: transform var(--transition-time);
+}
+.lgd-header__toggle--active .lgd-header__toggle-icon::after {
+  transform: rotate(180deg);
+}
+
+/* Header: Services / Pay spacing */
+@media screen and (min-width: 48rem) {
+  .lgd-header__nav--primary {
+    margin-inline-start: 0;
+  }
+}
+.lgd-header__toggles {
+  margin-inline-end: var(--spacing-smaller);
+}
+.menu--main .menu-item {
+  margin-inline-start: 0;
+}
+.menu--main a {
+  font-weight: 600;
 }
 
 /* ---------- Header search pill ---------- */
@@ -293,7 +333,9 @@ main.main {
   font-size: var(--font-size-large);
   max-width: 26rem;
 }
-.staffs-btn-green {
+/* Footer: sign-up button */
+.staffs-footer-cta__signup .staffs-btn-green,
+.staffs-footer-cta__signup a.staffs-btn-green {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-small);
@@ -304,7 +346,8 @@ main.main {
   text-decoration: none;
   font-weight: 700;
 }
-.staffs-btn-green:hover {
+.staffs-footer-cta__signup .staffs-btn-green:hover,
+.staffs-footer-cta__signup a.staffs-btn-green:hover {
   background: var(--color-navy);
   color: var(--color-white);
 }
@@ -401,6 +444,63 @@ main.main {
 }
 .service-landing-page__service .lgd-teaser h3 a {
   color: var(--color-navy);
+}
+
+/* Card grid for real Views-driven teaser listings (e.g. homepage News).
+   The base theme's .lgd-teaser is a horizontal list-item layout (thumbnail
+   beside text); here we turn each row into a standalone card matching the
+   look of the hand-built .staffs-card sections elsewhere on the page. */
+.lgd-teaser-list--grid .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+}
+.lgd-teaser-list--grid .views-row {
+  flex: 1 1 16rem;
+  max-width: calc(33.333% - var(--spacing-large) * 2 / 3);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.lgd-teaser-list--grid .lgd-teaser {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+.lgd-teaser-list--grid .lgd-teaser__image {
+  width: 100%;
+  margin: 0;
+}
+.lgd-teaser-list--grid .lgd-teaser__image img {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+  display: block;
+}
+.lgd-teaser-list--grid .lgd-teaser__content {
+  padding: var(--spacing-large);
+  margin: 0;
+}
+.lgd-teaser-list--grid .lgd-teaser__content h3 {
+  margin-block-start: 0;
+}
+.lgd-teaser-list--grid .lgd-teaser__content h3 a {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+@media screen and (max-width: 60rem) {
+  .lgd-teaser-list--grid .views-row {
+    max-width: calc(50% - var(--spacing-large) / 2);
+  }
+}
+@media screen and (max-width: 40rem) {
+  .lgd-teaser-list--grid .views-row {
+    max-width: 100%;
+  }
 }
 
 /* ---------- Dark navy title band (topic / sub-landing / content pages) ---------- */

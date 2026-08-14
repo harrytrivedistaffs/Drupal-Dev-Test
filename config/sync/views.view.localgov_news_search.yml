@@ -245,6 +245,20 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      defaults:
+        header: false
+      header:
+        area_heading:
+          id: area_heading
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: '<h2 class="visually-hidden">Search results</h2>'
+          tokenize: false
       exposed_block: true
       display_extenders: {  }
       path: news/search

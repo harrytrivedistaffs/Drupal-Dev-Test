@@ -721,6 +721,19 @@ display:
         type: search_api_none
       defaults:
         cache: false
+        header: false
+      header:
+        area_heading:
+          id: area_heading
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: '<h2 class="visually-hidden">Listings</h2>'
+          tokenize: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1

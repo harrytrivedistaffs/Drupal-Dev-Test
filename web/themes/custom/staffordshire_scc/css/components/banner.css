@@ -5,3 +5,8 @@
   border-color: var(--color-white);
   margin-inline: 0;
 }
+
+/* Banner title colour */
+.banner--primary .banner__content h1 {
+  color: var(--banner-content-text-color);
+}

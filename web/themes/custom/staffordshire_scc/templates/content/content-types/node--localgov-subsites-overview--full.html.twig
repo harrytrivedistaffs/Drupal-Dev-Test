@@ -1,0 +1,19 @@
+{# Subsite overview #}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ content.localgov_subsites_banner }}
+  {% if content.localgov_subsites_content %}
+    <h2 class="visually-hidden">{{ 'More on this page'|t }}</h2>
+    {{ content.localgov_subsites_content }}
+  {% endif %}
+  {{ content|without('localgov_subsites_banner', 'localgov_subsites_content') }}
+</article>

@@ -1,0 +1,17 @@
+{# Banner region #}
+{%
+  set classes = [
+    'lgd-region',
+    'lgd-region--' ~ region|clean_class,
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+
+{% if content %}
+  <div{{ attributes.addClass(classes) }} role="region" aria-label="{{ 'Site banner'|t }}">
+    <div class="lgd-region__inner lgd-region__inner--{{ region|clean_class }}">
+      {{ content }}
+    </div>
+  </div>
+{% endif %}

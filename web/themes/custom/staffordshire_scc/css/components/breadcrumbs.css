@@ -5,3 +5,8 @@
 .region-breadcrumb:not(:has(.breadcrumbs__item:nth-child(2))) {
   display: none;
 }
+
+/* Current-page breadcrumb item colour */
+.breadcrumbs__item {
+  color: var(--breadcrumbs-link-color);
+}

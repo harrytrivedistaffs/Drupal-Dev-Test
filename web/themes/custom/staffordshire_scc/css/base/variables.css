@@ -13,8 +13,9 @@ body {
   --color-purple: #5b2a86;
   --color-green: #0b6b32;
 
-  --font-primary: "Inter", "Open Sans", roboto, oxygen, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  --font-secondary: "Poppins", var(--font-primary);
+  /* Fonts */
+  --font-primary: "Frutiger", "Frutiger LT", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-secondary: var(--font-primary);
   --font-heading-1: var(--font-secondary);
   --font-heading-2: var(--font-secondary);
   --font-heading-3: var(--font-secondary);
@@ -89,8 +90,11 @@ body {
   --color-section-pre-footer-bg: var(--color-navy);
   --color-footer-link: var(--color-navy);
 
-  /* Alert banner / service statuses / misc accent usage */
+  /* Alert banner */
   --alert-banner-bg-color-minor: var(--color-pink);
+  --alert-banner-color-minor: var(--color-white);
+  --alert-banner-minor-color: var(--color-white);
+  --alert-banner-minor-border-color: var(--color-white);
   --service-statuses-padding: var(--grid-column-spacing);
 
   /* Tabs */

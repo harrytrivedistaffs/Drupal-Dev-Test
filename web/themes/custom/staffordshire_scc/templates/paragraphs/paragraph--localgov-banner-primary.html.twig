@@ -67,10 +67,11 @@
 
   <div class="lgd-container padding-horizontal">
     <div class="banner__content">
+      {# Banner title #}
       {% if banner_url %}
         <a class="banner__link" href="{{ banner_url }}">
       {% endif %}
-        {{ content.localgov_title }}
+        <h1>{{ paragraph.localgov_title.value }}</h1>
       {% if banner_url %}
         </a>
       {% endif %}
