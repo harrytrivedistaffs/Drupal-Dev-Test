@@ -24,52 +24,43 @@ $databases['default']['default'] = [
 ];
 
 
-In SiteProcess.php line 214:
 
-  The command "/home/digitalscc/drupaltestv2/vendor/bin/drush config:import --yes --uri=default" failed.
+[digitalscc@31 drupaltestv2]$ php -d memory_limit=1G vendor/bin/drush config:import -y --uri=default
 
-  Exit Code: 255(Unknown error)
+# Support bash to support `source` with fallback on $0 if this does not run with bash
+# https://stackoverflow.com/a/35006505/6512
+selfArg="$BASH_SOURCE"
+if [ -z "$selfArg" ]; then
+    selfArg="$0"
+fi
 
-  Working directory:
+self=$(realpath "$selfArg" 2> /dev/null)
+if [ -z "$self" ]; then
+    self="$selfArg"
+fi
 
-  Output:
-  ================
-  +------------+---------------------------------------------------------------+-----------+
-  | Collection | Config                                                        | Operation |
-  +------------+---------------------------------------------------------------+-----------+
-  |            | core.entity_view_display.node.localgov_subsites_page.full     | Create    |
-  |            | core.entity_view_display.node.localgov_subsites_overview.full | Create    |
-  |            | metatag.metatag_defaults.node__localgov_news_article          | Update    |
-  |            | staffordshire_scc.settings                                    | Update    |
-  |            | system.theme.global                                           | Update    |
-  |            | views.view.localgov_directory_channel                         | Update    |
-  |            | views.view.localgov_news_list                                 | Update    |
-  |            | block.block.staffs_homepage_news_grid                         | Update    |
-  |            | views.view.localgov_news_search                               | Update    |
-  |            | block.block.staffordshire_scc_localgov_news_date              | Update    |
-  |            | block.block.staffordshire_scc_localgov_news_category          | Update    |
-  |            | block.block.staffordshire_scc_localgov_news_search            | Update    |
-  |            | gin_login.settings                                            | Update    |
-  |            | shield.settings                                               | Update    |
-  +------------+---------------------------------------------------------------+-----------+
+dir=$(cd "${self%[/\\]*}" > /dev/null; cd '../drush/drush' && pwd)
 
-   // Import the listed configuration changes?: yes.
+if [ -d /proc/cygdrive ]; then
+    case $(which php) in
+        $(readlink -n /proc/cygdrive)/*)
+            # We are in Cygwin using Windows php, so the path must be translated
+            dir=$(cygpath -m "$dir");
+            ;;
+    esac
+fi
 
+export COMPOSER_RUNTIME_BIN_DIR="$(cd "${self%[/\\]*}" > /dev/null; pwd)"
 
+# If bash is sourcing this file, we have to source the target as well
+bashSource="$BASH_SOURCE"
+if [ -n "$bashSource" ]; then
+    if [ "$bashSource" != "$0" ]; then
+        source "${dir}/drush" "$@"
+        return
+    fi
+fi
 
-  Error Output:
-  ================
-   [notice] Synchronized configuration: create core.entity_view_display.node.localgov_subsites_page.full.
-   [notice] Synchronized configuration: create core.entity_view_display.node.localgov_subsites_overview.full.
-   [notice] Synchronized configuration: update metatag.metatag_defaults.node__localgov_news_article.
-   [notice] Synchronized configuration: update staffordshire_scc.settings.
-   [notice] Synchronized configuration: update system.theme.global.
-   [notice] Synchronized configuration: update views.view.localgov_directory_channel.
-   [notice] Synchronized configuration: update views.view.localgov_news_list.
-   [notice] Synchronized configuration: update block.block.staffs_homepage_news_grid.
-   [notice] Synchronized configuration: update views.view.localgov_news_search.
-   [notice] Synchronized configuration: update block.block.staffordshire_scc_localgov_news_date.
-   [notice] Synchronized configuration: update block.block.staffordshire_scc_localgov_news_category.
-   [notice] Synchronized configuration: update block.block.staffordshire_scc_localgov_news_search.
-   [notice] Synchronized configuration: update gin_login.settings.
-   [notice] Synchronized configuration: update shield.settings.
+exec "${dir}/drush" "$@"
+[digitalscc@31 drupaltestv2]$ vendor/bin/drush cache:rebuild
+ [success] Cache rebuild complete.
