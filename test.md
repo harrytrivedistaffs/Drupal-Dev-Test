@@ -28,7 +28,7 @@ In SiteProcess.php line 214:
 
   The command "/home/digitalscc/drupaltestv2/vendor/bin/drush config:import --yes --uri=default" failed.
 
-  Exit Code: 1(General error)
+  Exit Code: 255(Unknown error)
 
   Working directory:
 
@@ -39,7 +39,6 @@ In SiteProcess.php line 214:
   +------------+---------------------------------------------------------------+-----------+
   |            | core.entity_view_display.node.localgov_subsites_page.full     | Create    |
   |            | core.entity_view_display.node.localgov_subsites_overview.full | Create    |
-  |            | core.extension                                                | Update    |
   |            | metatag.metatag_defaults.node__localgov_news_article          | Update    |
   |            | staffordshire_scc.settings                                    | Update    |
   |            | system.theme.global                                           | Update    |
@@ -60,8 +59,17 @@ In SiteProcess.php line 214:
 
   Error Output:
   ================
-   [warning] Drush command terminated abnormally.
-
-
-[digitalscc@31 drupaltestv2]$ ^C
-[digitalscc@31 drupaltestv2]$ ^C
+   [notice] Synchronized configuration: create core.entity_view_display.node.localgov_subsites_page.full.
+   [notice] Synchronized configuration: create core.entity_view_display.node.localgov_subsites_overview.full.
+   [notice] Synchronized configuration: update metatag.metatag_defaults.node__localgov_news_article.
+   [notice] Synchronized configuration: update staffordshire_scc.settings.
+   [notice] Synchronized configuration: update system.theme.global.
+   [notice] Synchronized configuration: update views.view.localgov_directory_channel.
+   [notice] Synchronized configuration: update views.view.localgov_news_list.
+   [notice] Synchronized configuration: update block.block.staffs_homepage_news_grid.
+   [notice] Synchronized configuration: update views.view.localgov_news_search.
+   [notice] Synchronized configuration: update block.block.staffordshire_scc_localgov_news_date.
+   [notice] Synchronized configuration: update block.block.staffordshire_scc_localgov_news_category.
+   [notice] Synchronized configuration: update block.block.staffordshire_scc_localgov_news_search.
+   [notice] Synchronized configuration: update gin_login.settings.
+   [notice] Synchronized configuration: update shield.settings.
