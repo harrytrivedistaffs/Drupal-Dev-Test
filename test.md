@@ -64,3 +64,22 @@ fi
 exec "${dir}/drush" "$@"
 [digitalscc@31 drupaltestv2]$ vendor/bin/drush cache:rebuild
  [success] Cache rebuild complete.
+
+
+(async function pollUntilOk(url, delayMs = 2500, maxAttempts = 30) {
+  for (let i = 1; i <= maxAttempts; i++) {
+    try {
+      const res = await fetch(url, { credentials: 'include', cache: 'no-store' });
+      console.log(`Attempt ${i}: HTTP ${res.status}`);
+      if (res.ok) {
+        console.log('Loaded successfully — navigating now.');
+        location.href = url;
+        return;
+      }
+    } catch (e) {
+      console.log(`Attempt ${i}: request failed`, e);
+    }
+    await new Promise(r => setTimeout(r, delayMs));
+  }
+  console.warn(`Gave up after ${maxAttempts} attempts.`);
+})('https://sccdefault.digitalstaffordshire.info/YOUR-PATH-HERE');
