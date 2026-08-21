@@ -1,0 +1,13 @@
+# Drupal-Dev-Test
+#
+# The real Drupal webroot is the web/ subdirectory. If this subdomain's
+# document root is pointed at this folder instead of web/, this stops it
+# from showing a raw directory listing (or a bare 404 with no real site
+# behind it) and sends visitors into the real site instead.
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} !^/web/
+  RewriteRule ^(.*)$ /web/$1 [R=302,L]
+</IfModule>
